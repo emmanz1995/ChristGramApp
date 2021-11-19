@@ -76,6 +76,9 @@ export const MainPosts = styled.div`
       margin: 0 5px;
     }
   }
+  .padding {
+    padding: 5px 20px;
+  }
   form {
     width: 100%;
     padding: 20px;

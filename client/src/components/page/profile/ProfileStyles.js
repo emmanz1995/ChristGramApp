@@ -69,7 +69,7 @@ export const PostMenu = styled.div`
     }
   }
   .card-img {
-    width: 500px;
+    width: 300px;
     height: 200px;
   }
   .post-img {

@@ -48,7 +48,7 @@ const Profile = () => {
                 </ProfileBanner>
                 <PostMenu>
                     <div className="mypost-content">
-                        {myPosts?.mypost?.map(mypost => (
+                        {myPosts?.map(mypost => (
                             <div className="card" key={mypost._id}>
                                 {isLoading ?
                                 <Link className="post-link" href="">

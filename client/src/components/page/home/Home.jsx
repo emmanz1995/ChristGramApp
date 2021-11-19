@@ -72,7 +72,7 @@ const Home = () => {
             const newData = posts?.map(res => {
                 if(res._id === id){
                     return results
-                }else{
+                } else {
                     return res
                 }
             })
@@ -118,13 +118,16 @@ const Home = () => {
                                 </div>
                                 <div className="author-flex">
                                     <div className="title-author-section">
-                                        <h4>{post.title}</h4>
+                                        <h4 className="padding">{post.title}</h4>
                                     </div>
-                                    <i className="fas fa-thumbs-up" onClick={() => likePosts(post._id)} />
-                                    <i className="fas fa-thumbs-down" onClick={() => unLikePosts(post._id)} />
-                                    {post?.likes?.length} likes
+                                    <div className="padding">
+                                        <i className="fas fa-thumbs-up" onClick={() => likePosts(post._id)} />
+                                        <i className="fas fa-thumbs-down" onClick={() => unLikePosts(post._id)} />
+                                    </div>
+
+                                    <span className="padding">{post?.likes?.length} likes</span>
                                     {post?.comments.map(comment => (
-                                        <h4 key={comment._id}><span style={{fontWeight:"500"}}>{comment?.postedBy?.name}</span>{' '}{comment?.text}</h4>
+                                        <h4 key={comment._id}><span style={{fontWeight:"500", padding: '20px'}}>{comment?.postedBy?.name}</span>{' '}{comment?.text}</h4>
                                     ))}
                                 </div>
                                 <form className="comment-form" onSubmit={(evt) => {evt.preventDefault()
