@@ -37,7 +37,7 @@ router.post('/createpost', requireLogin, (req, res) => {
 })
 
 router.get('/mypost', requireLogin, (req, res) => {
-    Post.find({postedBy: req.user._id})
+    Post.find({ postedBy: req.user._id })
         .populate('postedBy', '_id, name')
         .then(mypost => {
             res.json(mypost);
@@ -51,7 +51,8 @@ router.put('/like', requireLogin, (req, res) => {
     Post.findByIdAndUpdate(req.body.postId, {
         $push: {likes: req.user._id}
     }, {
-        new: true
+        new: true,
+        useFindAndModify: false
     }).exec((err, result) => {
         if(err) {
             return res.status(422).json({error: err})
@@ -65,7 +66,8 @@ router.put('/unlike', requireLogin, (req, res) => {
     Post.findByIdAndUpdate(req.body.postId, {
         $pull: {likes: req.user._id}
     }, {
-        new: true
+        new: true,
+        useFindAndModify: false
     }).exec((err, result) => {
         if(err) {
             return res.status(422).json({error: err})
@@ -83,7 +85,8 @@ router.put('/comment', requireLogin, (req, res) => {
     Post.findByIdAndUpdate(req.body.postId,{
         $push: {comments: comment}
     },{
-        new: true
+        new: true,
+        useFindAndModify: false
     })
         .populate("comments.postedBy","_id name")
         .populate("postedBy","_id name")

@@ -9,7 +9,7 @@ export const SubPosts = styled.div`
   width: 100%;
   border: 1px solid ${props => props.theme.SecondaryColor};
   border-radius: 4px;
-  max-width: 1200px;
+  max-width: 968px;
   margin: 20px auto;
   .sub-posts-content {
     display: flex;
@@ -50,7 +50,7 @@ export const SubPosts = styled.div`
 
 export const MainPosts = styled.div`
   .post-content {
-    max-width: 1200px;
+    max-width: 968px;
     margin: 20px auto;
   }
   .card {

@@ -12,7 +12,7 @@ export const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 968px;
   margin: 0 auto;
 `;
 export const NavbarHeader = styled.h1`

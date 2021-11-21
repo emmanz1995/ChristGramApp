@@ -5,7 +5,7 @@ export const ProfileWrapper = styled.div`
 `;
 export const ProfileBanner = styled.div`
   .banner-content {
-    max-width: 1200px;
+    max-width: 968px;
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
@@ -51,7 +51,7 @@ export const ProfileBanner = styled.div`
 `;
 export const PostMenu = styled.div`
   .mypost-content {
-    max-width: 1200px;
+    max-width: 968px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

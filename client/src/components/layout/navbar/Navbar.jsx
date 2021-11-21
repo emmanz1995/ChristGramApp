@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledNavbar, StyledNav, NavbarHeader, UnorderedList, List, StyledLink } from './NavbarStyles';
-import { AuthService } from "../../../services/authService";
+import AuthService from "../../../services/authService";
 import { useHistory } from 'react-router-dom';
 
 const Navbar = ({ currentUser }) => {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../../layout/navbar/Navbar';
 import { SignupWrapper, SignupContent, BackgroundForm, SignupForm } from './SignupStyles';
-import { AuthService } from '../../../services/authService';
+import AuthService from '../../../services/authService';
 import { useHistory } from 'react-router-dom';
 import { useAlert } from 'react-alert';
 

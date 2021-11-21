@@ -26,9 +26,10 @@ app.use(express.json());
 app.use(require('./routes/auth'));
 app.use(require('./routes/post'));
 app.use(require('./routes/prayerRequest'));
+app.use(require('./routes/users'));
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Welcome to the Christogram API!');
 });
 
 app.listen(PORT,() => {

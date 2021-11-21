@@ -3,7 +3,7 @@ import Navbar from '../../layout/navbar/Navbar';
 import { HomeWrapper, SubPosts, MainPosts } from './HomeStyles';
 import PostData from '../../../mockData/mockPostData';
 import SubPostsData from '../../../mockData/mockSubPostData';
-import { AuthService } from '../../../services/authService';
+import AuthService from '../../../services/authService';
 import { PostService } from "../../../services/postService";
 import { useAlert } from 'react-alert';
 import { toast, ToastContainer } from 'react-toastify';
@@ -118,7 +118,10 @@ const Home = () => {
                                 </div>
                                 <div className="author-flex">
                                     <div className="title-author-section">
-                                        <h4 className="padding">{post.title}</h4>
+                                        <h4 className="padding">
+                                            {post.title}
+                                            <hr />
+                                        </h4>
                                     </div>
                                     <div className="padding">
                                         <i className="fas fa-thumbs-up" onClick={() => likePosts(post._id)} />

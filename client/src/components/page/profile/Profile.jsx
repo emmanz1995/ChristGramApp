@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../layout/navbar/Navbar';
 import { ProfileWrapper, ProfileBanner, PostMenu } from './ProfileStyles';
-import { AuthService } from '../../../services/authService';
+import AuthService from '../../../services/authService';
 import { PostService } from '../../../services/postService';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';

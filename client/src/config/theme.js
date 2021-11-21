@@ -1,6 +1,6 @@
 const media = {
     mobile: '400px',
-    tablet: '1024'
+    tablet: '1024px'
 }
 
 const theme = {

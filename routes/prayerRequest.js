@@ -33,7 +33,7 @@ router.get('/myprayer', requireLogin, (req, res) => {
 })
 
 router.delete('/deleteprayerreq/:prayerId', requireLogin, (req, res) => {
-    PrayerRequest.findOne({_id: req.params.prayerId})
+    PrayerRequest.findOne({ _id: req.params.prayerId })
         .populate('postedBy', '_id')
         .exec((err, prayer) => {
             if(err || !prayer) {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CreatePostWrapper, BackgroundForm, CreatePostForm } from './CreatePostStyles';
 import Navbar from '../../layout/navbar/Navbar';
-import { AuthService } from '../../../services/authService';
+import AuthService from '../../../services/authService';
 import { PostService } from '../../../services/postService';
 import { useAlert } from 'react-alert';
 import { useHistory } from 'react-router-dom';

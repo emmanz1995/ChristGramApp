@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navbar from '../../layout/navbar/Navbar';
 import { useHistory, Link } from 'react-router-dom';
 import { PrayerRequestWrapper, PrayerReqBanner, MainBody, SmNav } from './PrayerRequestStyles';
-import { AuthService } from '../../../services/authService';
+import AuthService from '../../../services/authService';
 import { PrayerReqService } from '../../../services/prayerReqService';
 import Card from '../../layout/card/Card';
 import CreatePrayerReq from '../createPrayerReq/CreatePrayerReq';

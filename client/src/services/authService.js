@@ -1,43 +1,33 @@
 import axios from 'axios';
 
-    function onSignin(formData) {
+const AuthService = {
+    onSignin: function(formData) {
         return axios.post('/signin', (formData), {
             headers: {
                 'Content-Type': 'application/json'
             }
-        })
-            .then((response) => {
-                if(response.data.token) {
-                    localStorage.setItem('user', JSON.stringify(response.data));
-                }
-                return response.data;
-            })
-            .catch(error => console.log(error));
-    }
-
-    function getUser() {
+        }).then((response) => {
+            if(response.data.token) {
+                localStorage.setItem('user', JSON.stringify(response.data));
+            }
+            return response.data;
+        }).catch(error => console.log(error));
+    },
+    getUser: function() {
         return JSON.parse(localStorage.getItem('user'));
-    }
-
-    function onSignup(formData) {
+    },
+    onRegister: function(formData) {
         return axios.post('/signup', (formData),{
             headers: {
                 'Content-Type': 'application/json'
             }
-        })
-            .then((response) => {
-                return response.data;
-            })
-            .catch(error => console.log(error));
-    }
-
-    function onSignout() {
+        }).then((response) => {
+            return response.data;
+        }).catch(error => console.log(error));
+    },
+    onSignout: function () {
         localStorage.clear();
     }
-
-export const AuthService = {
-    onSignin,
-    onSignup,
-    onSignout,
-    getUser
 }
+
+export default AuthService;

@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import Navbar from '../../layout/navbar/Navbar';
 import { SigninWrapper, SigninContent, SigninForm, BackgroundForm } from './SigninStyles';
-import { useHistory } from 'react-router-dom';
-import { AuthService } from '../../../services/authService';
+import {Redirect, useHistory} from 'react-router-dom';
+import AuthService from '../../../services/authService';
 import { useAlert } from 'react-alert';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -37,6 +37,9 @@ const Signin = () => {
                 console.log(error);
                 alert.error('Couldnt sign you in!')
             })
+    }
+    if(AuthService.getUser()) {
+        return <Redirect to={{ pathname: "/home" }} />
     }
     return (
         <div className="signin">

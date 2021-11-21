@@ -6,7 +6,7 @@ export const PrayerRequestWrapper = styled.div`
 
 export const PrayerReqBanner = styled.div`
   .main-banner-area {
-    max-width: 1200px;
+    max-width: 968px;
     margin: 0 auto;
     border-bottom: 1px solid ${props => props.theme.SecondaryColor};
     height: 250px;
@@ -42,7 +42,7 @@ export const SmNav = styled.div`
 
 export const MainBody = styled.div`
   .prayer-req-area {
-    max-width: 1200px;
+    max-width: 968px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

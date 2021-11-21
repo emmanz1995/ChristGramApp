@@ -9,7 +9,7 @@ export const CreatePostWrapper = styled.div`
 export const BackgroundForm = styled.div`
   height: 630px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 968px;
   margin: 0 auto;
   background-color: ${props => props.theme.White};
   border-radius: 4px;
