@@ -93,4 +93,9 @@ export const MainPosts = styled.div`
       }
     }
   }
+  @media screen and (max-width: ${props => props.theme.mobile}) {
+    .post-content {
+      padding: 10px;
+    }
+  }
 `;
