@@ -44,8 +44,9 @@ export const MainBody = styled.div`
   .prayer-req-area {
     max-width: 968px;
     margin: 0 auto;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     flex-wrap: wrap;
   }
   .no-prayer-found {

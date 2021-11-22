@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const CardWrapper = styled.div`
-  width: 30%;
+  width: 31.2%;
   background-color: ${props => props.theme.White};
   border: 1px solid ${props => props.theme.SecondaryColor};
   border-radius: 4px;
-  margin: 10px 0;
+  margin: 10px 10px;
 `;
 export const CardHeader = styled.div`
   margin: 10px;

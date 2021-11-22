@@ -59,6 +59,7 @@ export const MainPosts = styled.div`
     width: 100%;
     border: 1px solid ${props => props.theme.SecondaryColor};
     border-radius: 4px;
+    background-color: #fff;
   }
   .img-container {
     width: 100%;
